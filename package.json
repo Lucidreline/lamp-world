@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -L src/server.js",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "docker-build-dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d",
+    "docker-destroy-dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v",
+    "docker-build-prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v",
+    "docker-destroy-prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml down -v"
+
   },
   "keywords": [],
   "author": "",

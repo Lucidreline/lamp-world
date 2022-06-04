@@ -1,0 +1,9 @@
+version: "3"
+services:
+  lamp-app:
+    volumes:
+      - ./:/app:ro
+      - /app/node_modules
+    environment: 
+      - NODE_ENV=production
+    command: npm run dev
